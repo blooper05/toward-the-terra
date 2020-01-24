@@ -1,13 +1,13 @@
-# terraform {
-#   backend "s3" {
-#     bucket         = "blooper-terraform-state"
-#     key            = "terraform.singleton.tfstate"
-#     dynamodb_table = "terraform-state-lock"
-#
-#     profile = "blooper"
-#     region  = "ap-northeast-1"
-#   }
-# }
+terraform {
+  backend "s3" {
+    bucket         = "blooper-terraform-state"
+    key            = "terraform.singleton.tfstate"
+    dynamodb_table = "terraform-state-lock"
+
+    profile = "blooper"
+    region  = "ap-northeast-1"
+  }
+}
 
 resource "aws_s3_bucket" "terraform-state" {
   bucket = "blooper-terraform-state"
