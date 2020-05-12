@@ -1,5 +1,5 @@
 provider "aws" {
-  version = "= 2.46.0"
+  version = "= 2.61.0"
 
   profile = "blooper"
   region  = "ap-northeast-1"
